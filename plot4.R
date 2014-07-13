@@ -1,4 +1,5 @@
 setwd("C:/R_exerc/explo")
+Sys.setlocale("LC_TIME", "C")
 power<-read.table("household_power_consumption.txt", sep=";", header=TRUE, na.strings="?")
 power$Date<-paste(power$Date, power$Time, sep=" ")
 power$Date<-strptime(power$Date, format="%d/%m/%Y %H:%M:%S")
